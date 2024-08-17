@@ -1,0 +1,11 @@
+node_modules/
+build/
+.husky/
+.vscode/
+.git/
+.gitignore
+.dockerignore
+Dockerfile
+LICENSE
+README.md
+docker-compose*.yml

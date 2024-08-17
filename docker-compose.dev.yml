@@ -1,0 +1,20 @@
+services:
+  agrarian-wbe:
+    build: 
+      context: .
+      args:
+        - NODE_ENV=development
+    depends_on:
+      - postgres
+    env_file: .env.devlopement
+    command: npm run dev
+  
+  postgres:
+    image: postgres:16-alpine
+    restart: always
+    env_file: .env.devlopement
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:

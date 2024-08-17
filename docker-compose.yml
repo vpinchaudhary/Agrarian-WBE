@@ -1,0 +1,15 @@
+services:
+  agrarian-wbe:
+    build:
+      context: .
+    env_file: .env
+    volumes:
+      - .:/app
+      - agrarian-wbe-node_modules:/app/node_modules
+    ports:
+      - 3000:3000
+    command: npm run start
+    
+
+volumes:
+  agrarian-wbe-node_modules:
